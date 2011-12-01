@@ -26,3 +26,6 @@ Manually link files here to user home:
     $ cd ~/.dotfiles
     $ ln -ns irbrc ~/.irbrc
 
+## Credit
+
+Much of this was inspired or straight-up copied from https://github.com/henrik/dotfiles
