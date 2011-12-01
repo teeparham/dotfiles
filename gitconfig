@@ -1,0 +1,47 @@
+[color]
+	ui = auto
+
+[color "diff"]
+	meta = blue bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow bold
+	remote = green bold
+	plain = red bold
+
+[color "status"]
+	added = yellow
+	changed = green bold
+	untracked = blue bold
+
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	sb = show-branch
+	df = diff --ignore-space-change
+	pushm = push origin master
+	pullm = pull origin master
+        pulld = pull origin dev
+        pushd = push origin dev
+	aa = add -A
+
+[push]
+	# push current branch even if you've never pushed it before
+	default = current
+[user]
+	name = Tee Parham
+	email = tee@stackpilot.com
+
+[core]
+	excludesfile = /Users/tee/.gitignore
+	whitespace = -trailing-space
+
+[github]
+	user = teeparham
+	token = <.replace github-token>

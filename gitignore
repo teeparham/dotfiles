@@ -1,0 +1,5 @@
+.idea/*
+log/*.log
+.svn/*
+*/.svn/*
+.DS_Store
