@@ -1,0 +1,6 @@
+require 'consular/osx'
+
+# Consular.configure do |c|
+#   c.global_path    = '~/.config/consular'
+#   c.default_editor = 'vim'
+# end
