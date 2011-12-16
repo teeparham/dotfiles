@@ -31,6 +31,14 @@ def lap
   require 'ap'
 end
 
+class Object
+  def wtf(method_name)
+    method(method_name).source_location
+    rescue NameError
+      "#{method_name} not defined"
+  end
+end
+
 if defined? Rails
   ActiveRecord::Base.logger = Logger.new STDOUT
   ActiveRecord::Base.clear_reloadable_connections!
