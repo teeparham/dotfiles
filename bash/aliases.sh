@@ -1,4 +1,5 @@
 alias hg='history | grep $1'
+alias eg='env | grep $1'
 alias gc='git commit -a -m $1'
 alias gs='git status'
 alias gd='git diff'
