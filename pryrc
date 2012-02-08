@@ -24,3 +24,4 @@ if defined? Hirb
   Hirb.enable
 end
 
+alias q exit
