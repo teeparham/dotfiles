@@ -1,9 +1,6 @@
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-# Postgres
-export PATH=/usr/local/pgsql/bin:$PATH
-
 # MySQL
 export PATH=/usr/local/mysql/bin:$PATH
 
