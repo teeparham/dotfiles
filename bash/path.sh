@@ -7,5 +7,5 @@ export PATH=/usr/local/mysql/bin:$PATH
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Bash completion
-[[ -f /opt/local/etc/bash_completion ]] && . /opt/local/etc/bash_completion
+# git bash completion
+source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
