@@ -96,6 +96,20 @@ if defined? Rails
   end
 
   def db; DatabaseHelpers; end
-    
+
+  def show_log
+    _change_log STDOUT
+  end
+
+  def hide_log
+    _change_log nil
+  end
+  
+  def _change_log(stream)
+    ActiveRecord::Base.logger = ::Logger.new(stream)
+    ActiveRecord::Base.clear_all_connections!
+    nil
+  end  
+
 end
 
