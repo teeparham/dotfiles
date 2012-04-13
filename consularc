@@ -1,4 +1,5 @@
-require 'consular/osx'
+# require 'consular/osx'
+require 'consular/iterm'
 
 # Consular.configure do |c|
 #   c.global_path    = '~/.config/consular'
