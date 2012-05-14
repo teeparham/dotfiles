@@ -26,8 +26,8 @@
 	sb = show-branch
 	df = diff --ignore-space-change
 	pushm = push origin master
-	pullm = pull origin master
-        pulld = pull origin dev
+	pullm = pull origin master --no-edit
+        pulld = pull origin dev --no-edit
         pushd = push origin dev
 	aa = add -A
 
@@ -36,7 +36,7 @@
 	default = current
 [user]
 	name = Tee Parham
-	email = tee@stackpilot.com
+	email = tee@neighborland.com
 
 [core]
 	excludesfile = /Users/tee/.gitignore
