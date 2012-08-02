@@ -45,6 +45,7 @@ if defined? Rails
   ActionController::Base.logger = Logger.new STDOUT
   include Rails.application.routes.url_helpers
   default_url_options[:host] = Rails.application.class.parent_name.downcase
+  url_opts = opts = {url_options: {host:"x.x"}}
 
   app_name = Rails.application.class.parent_name.downcase
   app_env  = Rails.env[0...3]
