@@ -26,9 +26,9 @@
 	sb = show-branch
 	df = diff --ignore-space-change
 	pushm = push origin master
-	pullm = pull origin master 
-        pulld = pull origin dev
-        pushd = push origin dev
+  pullm = pull origin master
+  pulld = pull origin dev
+  pushd = push origin dev
 	aa = add -A
 
 [branch]
