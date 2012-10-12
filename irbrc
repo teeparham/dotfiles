@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'wirble'
 require 'hirb'
 
 begin
@@ -19,9 +18,6 @@ def haml
   puts "Haml Helpers Loaded"
 end
 public :haml
-
-Wirble.init 
-Wirble.colorize
 
 Hirb.enable
 
@@ -60,11 +56,11 @@ if defined? Rails
     :AUTO_INDENT => true,
   }
   IRB.conf[:PROMPT_MODE] = :RAILS
-  
+
   def sql(query)
     ActiveRecord::Base.connection.select_all(query)
-  end  
-  
+  end
+
   module DatabaseHelpers
     extend self
 
@@ -106,12 +102,12 @@ if defined? Rails
   def hide_log
     _change_log nil
   end
-  
+
   def _change_log(stream)
     ActiveRecord::Base.logger = ::Logger.new(stream)
     ActiveRecord::Base.clear_all_connections!
     nil
-  end  
+  end
 
 end
 
