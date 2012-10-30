@@ -1,4 +1,3 @@
-# require 'consular/osx'
 require 'consular/iterm'
 
 # Consular.configure do |c|
