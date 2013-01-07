@@ -10,3 +10,5 @@ source ~/.bash/functions.sh
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
+
+eval "$(~/pro/neighborland/scripts/bin/neighbor init -)"
