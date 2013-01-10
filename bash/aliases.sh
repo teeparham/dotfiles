@@ -9,6 +9,7 @@ alias hiddenfilesoff='defaults write com.apple.finder AppleShowAllFiles FALSE &&
 alias gc='git commit -a -m $1'
 alias gs='git status'
 alias gd='git diff'
+alias gl='git log'
 alias push='git push'
 alias pull='git pull'
 
