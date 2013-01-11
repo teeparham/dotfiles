@@ -10,6 +10,7 @@ alias gc='git commit -a -m $1'
 alias gs='git status'
 alias gd='git diff'
 alias gl='git log'
+alias glme='git log --author=tee'
 alias push='git push'
 alias pull='git pull'
 
