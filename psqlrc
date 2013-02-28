@@ -1,0 +1,10 @@
+\set ECHO none
+\pset null 'NULL'
+\pset pager off
+\set HISTFILE ~/.psql_history- :HOST - :DBNAME
+\set HISTSIZE 5000
+\set HISTCONTROL ignoredups
+\set FETCH_COUNT 1000
+\encoding unicode
+\timing
+\set ECHO all
