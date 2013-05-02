@@ -1,5 +1,13 @@
-.idea/*
-log/*.log
-.svn/*
-*/.svn/*
+*.gem
+*.log
 .DS_Store
+.bundle
+.config
+.idea
+coverage
+InstalledFiles
+log
+pkg
+rdoc
+tmp
+
