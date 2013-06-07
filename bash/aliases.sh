@@ -30,5 +30,5 @@ alias zprep='zeus rake parallel:prepare[6]'
 alias zp='zeus rake parallel:test[6]'
 alias redis='redis-server /usr/local/etc/redis.conf'
 
-alias snoop="ruby -e \"require 'ffaker'; puts Faker::DizzleIpsum.paragraph\""
+alias dizzle="ruby -e \"require 'ffaker'; puts Faker::DizzleIpsum.paragraph\""
 alias hipster="ruby -e \"require 'ffaker'; puts Faker::HipsterIpsum.paragraph\""
