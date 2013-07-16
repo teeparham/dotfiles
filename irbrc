@@ -1,6 +1,13 @@
 require 'rubygems'
 require 'hirb'
 
+def time
+  t1 = Time.now
+  yield
+  t2 = Time.now
+  puts "----> #{((t2-t1)*1000).round(0)} ms"
+end
+
 def haml
   helper.extend Haml::Helpers
   helper.extend ApplicationHelper
