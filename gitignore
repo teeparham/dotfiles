@@ -4,6 +4,7 @@
 .bundle
 .config
 .idea
+.rvmrc
 coverage
 InstalledFiles
 log
