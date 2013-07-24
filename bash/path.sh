@@ -1,5 +1,5 @@
-# Homebrew
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# Homebrew, npm
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
