@@ -4,9 +4,13 @@ set nocompatible
 " Set default encoding to UTF-8.
 set encoding=utf-8 fileencodings=
 
-" The first setting sets up 2-space tabs, the second tells vi to use 2 spaces when text is indented (auto or with the manual indent adjustmenters), and the third tells vi not to auto-replace spaces with tab characters.
+" 2-space tabs
 set tabstop=2
+
+" use 2 spaces when text is indented (auto or with the manual indent adjustmenters)
 set shiftwidth=2
+
+" do not auto-replace spaces with tab characters
 set expandtab
 
 " I indent my code myself, thank you very much.
@@ -137,6 +141,7 @@ set viminfo='1000,\"1000,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 autocmd BufWritePre * :%s/\s\+$//e
+
 "highlight ExtraTabs ctermbg=red guibg=red
 let ruby_space_errors = 1
 let c_space_errors = 1
