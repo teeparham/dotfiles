@@ -16,7 +16,7 @@ def haml
 end
 public :haml
 
-Hirb.enable
+Hirb.enable if defined?(Hirb)
 
 alias q exit
 
@@ -32,7 +32,7 @@ class Object
   end
 end
 
-if defined? Rails
+if defined?(Rails)
   ActiveRecord::Base.logger = Logger.new STDOUT
   ActiveRecord::Base.clear_reloadable_connections!
   ActionController::Base.logger = Logger.new STDOUT
