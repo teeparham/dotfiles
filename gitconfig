@@ -1,51 +1,51 @@
 [color]
-	ui = auto
+  ui = auto
 
 [color "diff"]
-	meta = blue bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = blue bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 
 [color "branch"]
-	current = yellow reverse
-	local = yellow bold
-	remote = green bold
-	plain = red bold
+  current = yellow reverse
+  local = yellow bold
+  remote = green bold
+  plain = red bold
 
 [color "status"]
-	added = yellow
-	changed = green bold
-	untracked = blue bold
+  added = yellow
+  changed = green bold
+  untracked = blue bold
 
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
-	sb = show-branch
-	df = diff --ignore-space-change
-	aa = add -A
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  sb = show-branch
+  df = diff --ignore-space-change
+  aa = add -A
 
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 
 [push]
-	# push current branch even if you've never pushed it before
-	default = current
+  # push current branch even if you've never pushed it before
+  default = current
 
 [user]
-	name = Tee Parham
-	email = tee@neighborland.com
+  name = Tee Parham
+  email = tee@neighborland.com
 
 [core]
-	excludesfile = /Users/tee/.gitignore
-	whitespace = -trailing-space
+  excludesfile = /Users/tee/.gitignore
+  whitespace = -trailing-space
   ignorecase = false
 
 [github]
-	user = teeparham
-	token = <.replace github-token>
+  user = teeparham
+  token = <.replace github-token>
 
 [credential]
   helper = osxkeychain
