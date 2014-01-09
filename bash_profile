@@ -11,4 +11,5 @@ if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
+eval "$(direnv hook bash)"
 eval "$(~/pro/neighborland/scripts/bin/neighbor init -)"
