@@ -29,8 +29,9 @@ alias sprep='spring rake parallel:prepare[6]'
 alias sp='spring rake parallel:test[6]'
 alias sc='spring rails c'
 alias ss='spring rails s'
-alias st='spring status'
 alias t='spring testunit $1'
+
+alias wtf3000='lsof -wni tcp:3000'
 
 alias z='zeus'
 alias zs='zeus start'
