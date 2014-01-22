@@ -15,8 +15,6 @@ alias glme='git log --author=tee'
 alias push='git push'
 alias pull='git pull'
 
-alias rs='bin/rails s'
-alias rc='bin/rails c'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bo='bundle outdated'
@@ -25,18 +23,13 @@ alias bu='bundle update'
 alias bake='be rake'
 alias bg='be guard -c'
 
-alias sprep='spring rake parallel:prepare[6]'
-alias sp='spring rake parallel:test[6]'
-alias sc='spring rails c'
-alias ss='spring rails s'
+alias prep='rake parallel:prepare[6]'
+alias pt='rake parallel:test[6]'
+alias rc='rails c'
+alias rs='rails s'
 alias t='spring testunit $1'
 
 alias wtf3000='lsof -wni tcp:3000'
-
-alias z='zeus'
-alias zs='zeus start'
-alias zprep='zeus rake parallel:prepare[6]'
-alias zp='zeus rake parallel:test[6]'
 
 alias redis='redis-server /usr/local/etc/redis.conf'
 
