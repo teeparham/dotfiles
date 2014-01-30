@@ -1,5 +1,8 @@
-require 'rubygems'
-require 'hirb'
+begin
+  require 'hirb'
+  Hirb.enable
+rescue LoadError
+end
 
 def time
   t1 = Time.now
@@ -16,7 +19,6 @@ def haml
 end
 public :haml
 
-Hirb.enable if defined?(Hirb)
 
 alias q exit
 
