@@ -2,15 +2,25 @@
 
 IGNORE_FILES = ['Rakefile', 'README.md', '.gitignore', 'extras']
 
-def error(text) STDERR.puts "!  #{text}" end
-def info(text, prefix="*") STDOUT.puts "#{prefix}  #{text}" end
-def info_cmd(text) info(text, ">") end
-def info_rm(text) info(text, "x") end
- 
+def error(text)
+  STDERR.puts "!  #{text}"
+end
+
+def info(text, prefix="*")
+  STDOUT.puts "#{prefix}  #{text}"
+end
+
+def info_cmd(text)
+  info(text, ">")
+end
+
+def info_rm(text)
+  info(text, "x")
+end
+
 desc "Install dotfiles."
 task :install do
   Dir["*"].each do |file|
-
     source = File.join(Dir.pwd, file)
     basename = File.basename(source)
     next if IGNORE_FILES.include?(basename)
@@ -30,9 +40,9 @@ task :install do
         next
       end
     end
-    
+
     contents = File.read(source) rescue ""
-    
+
     if contents.include?('<.replace ')
       info "#{source} has <.replace> placeholders."
 
