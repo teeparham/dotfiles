@@ -34,3 +34,6 @@ alias redis='redis-server /usr/local/etc/redis.conf'
 
 alias dizzle="ruby -e \"require 'ffaker'; puts Faker::DizzleIpsum.paragraph\""
 alias hipster="ruby -e \"require 'ffaker'; puts Faker::HipsterIpsum.paragraph\""
+
+# https://gist.github.com/lelandbatey/8677901
+alias whiteboard='convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2'
