@@ -25,7 +25,7 @@ alias bake='be rake'
 alias prep='rake parallel:prepare[6]'
 alias pt='rake parallel:test[6]'
 alias rc='rails c'
-alias rs='rails s'
+alias rs='rails s -b 127.0.0.1'
 alias t='spring testunit $1'
 
 alias wtf3000='lsof -wni tcp:3000'
