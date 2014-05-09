@@ -29,6 +29,7 @@ alias rs='rails s -b 127.0.0.1'
 alias t='spring rake test $1'
 
 alias wtf3000='lsof -wni tcp:3000'
+alias rdoc2md='ruby ~/.ruby/rdoc2md.rb $1'
 
 alias redis='redis-server /usr/local/etc/redis.conf'
 
