@@ -11,7 +11,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges"
 alias gitup='git branch --set-upstream-to=origin/master master'
-alias glme='git log --author=tee'
+alias glme='gl --author=tee'
 alias push='git push'
 alias pull='git pull'
 alias amend='git commit --amend'
