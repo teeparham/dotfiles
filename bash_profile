@@ -12,6 +12,9 @@ if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 eval "$(direnv hook bash)"
 eval "$(~/pro/neighborland/scripts/bin/neighbor init -)"
 
