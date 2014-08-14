@@ -5,10 +5,10 @@
 .config
 .idea
 .rvmrc
-coverage
 InstalledFiles
-log
 pkg
 rdoc
 tmp
-
+/coverage
+/log
+/tags
