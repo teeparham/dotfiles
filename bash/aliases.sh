@@ -32,6 +32,7 @@ alias wtf3000='lsof -wni tcp:3000'
 alias rdoc2md='ruby ~/.ruby/rdoc2md.rb $1'
 
 alias redis='redis-server /usr/local/etc/redis.conf'
+alias ct='/usr/local/bin/ctags -R .'
 
 alias dizzle="ruby -e \"require 'ffaker'; puts Faker::DizzleIpsum.paragraph\""
 alias hipster="ruby -e \"require 'ffaker'; puts Faker::HipsterIpsum.paragraph\""
