@@ -5,6 +5,7 @@ alias lsa='ls -la'
 
 alias hiddenfileson='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
 alias hiddenfilesoff='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
+alias iphone="open -a \"iPhone Simulator\""
 
 alias gc='git commit -a -m $1'
 alias gs='git status'
