@@ -34,8 +34,8 @@ alias rdoc2md='ruby ~/.ruby/rdoc2md.rb $1'
 alias redis='redis-server /usr/local/etc/redis.conf'
 alias ct='/usr/local/bin/ctags -R .'
 
-alias dizzle="ruby -e \"require 'ffaker'; puts Faker::DizzleIpsum.paragraph\""
-alias hipster="ruby -e \"require 'ffaker'; puts Faker::HipsterIpsum.paragraph\""
+alias dizzle="ruby -e \"require 'ffaker'; puts Faker::DizzleIpsum.paragraph\" | tee >(pbcopy)"
+alias hipster="ruby -e \"require 'ffaker'; puts Faker::HipsterIpsum.paragraph\" | tee >(pbcopy)"
 
 # https://gist.github.com/lelandbatey/8677901
 alias whiteboard='convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2'
