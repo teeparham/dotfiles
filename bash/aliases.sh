@@ -1,7 +1,7 @@
 alias hg='history | grep $1'
 alias eg='env | grep $1'
-alias lsl='ls -l'
-alias lsa='ls -la'
+alias lsl='ls -Alh'
+alias lst='ls -Alht'
 
 alias hiddenfileson='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
 alias hiddenfilesoff='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
