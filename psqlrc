@@ -6,5 +6,3 @@
 \set HISTCONTROL ignoredups
 \set FETCH_COUNT 1000
 \encoding unicode
-\timing
-\set ECHO all
