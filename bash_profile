@@ -18,3 +18,5 @@ source $(brew --prefix nvm)/nvm.sh
 eval "$(direnv hook bash)"
 eval "$(~/pro/neighborland/scripts/bin/neighbor init -)"
 
+eval `keychain --eval --inherit any`
+export GPG_TTY=`tty`
