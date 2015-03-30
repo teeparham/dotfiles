@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+# Shared code for irbrc/pryrc
+
+alias q exit
+
+# Quick benchmarking
+# http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick/123834#123834
+def bench(repetitions=100, &block)
+  require "benchmark"
+
+  Benchmark.bmbm do |b|
+    b.report { repetitions.times &block }
+  end
+  nil
+end
+
+begin
+  require "hirb"
+  Hirb.enable
+rescue LoadError
+  puts "warning: hirb not installed"
+end
+
+def time
+  t1 = Time.now
+  yield
+  t2 = Time.now
+  puts "----> #{ ((t2-t1)*1000).round(0) } ms"
+end
+
+def haml
+  helper.extend Haml::Helpers
+  helper.extend ApplicationHelper
+  helper.init_haml_helpers
+  puts "Haml Helpers Loaded"
+end
+public :haml
+
+class Object
+  def wtf(method_name)
+    method(method_name).source_location
+  rescue NameError
+    "#{ method_name } not defined"
+  end
+end
+
+def hhi; { a: 1, b: 2, c: 3, d: 4, e: 5 }; end
+def hhs; { a: "a", b: "b", c: "c", d: "d", e: "e" }; end
+def aai; [1, 2, 3, 4, 5]; end
+def aas; %w(a b c d e); end
+
+load File.expand_path("~/.railsrc")
