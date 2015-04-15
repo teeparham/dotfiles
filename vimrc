@@ -1,11 +1,14 @@
-" This setting prevents vim from emulating the original vi's bugs and limitations.
+" Prevent vim from emulating the original vi's bugs and limitations.
 set nocompatible
 
-" Set default encoding to UTF-8.
 set encoding=utf-8 fileencodings=
-
-" 2-space tabs
 set tabstop=2
+
+" show line numbers
+set number
+
+" color line numbers grey
+highlight LineNr ctermfg=grey guibg=black
 
 " use 2 spaces when text is indented (auto or with the manual indent adjustmenters)
 set shiftwidth=2
@@ -21,14 +24,14 @@ set expandtab
 set autoindent
 set smarttab
 
-" This setting will cause the cursor to very briefly jump to a brace/parenthese/bracket's match whenever you type a closing or opening brace/parenthese/bracket.
+" Cause the cursor to very briefly jump to a brace/parenthese/bracket's match whenever you type a closing or opening brace/parenthese/bracket.
 set showmatch
 
 " Keep 5 lines of context when scrolling
 set scrolloff=5
 
-" This setting prevents vi from making its annoying beeps when a command doesn't work. Instead, it briefly flashes the screen -- much less annoying.
-" set noerrorbells
+" Prevent annoying beeps when a command doesn't work. Instead, it briefly flashes the screen -- much less annoying.
+set noerrorbells
 " set vb t_vb=
 
 " Case insensitive matching.
@@ -145,3 +148,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 "highlight ExtraTabs ctermbg=red guibg=red
 let ruby_space_errors = 1
 let c_space_errors = 1
+
