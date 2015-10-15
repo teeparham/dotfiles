@@ -16,6 +16,9 @@ alias push='git push'
 alias pull='git pull'
 alias amend='git commit --amend'
 
+export GITMASK='rb|js|html|erb|haml|slim|css|scss|jsx|rake|json|yml|c|h|cpp'
+alias gitwho="git ls-tree --name-only -r HEAD | grep -E '\.($GITMASK)$' | xargs -n1 git blame --line-porcelain | grep '^author '|sort|uniq -c|sort -nr"
+
 alias be='bundle exec'
 alias bo='bundle outdated'
 alias bos='bundle outdated --strict'
