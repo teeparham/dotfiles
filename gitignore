@@ -2,6 +2,7 @@
 *.log
 .DS_Store
 .bundle
+.byebug_history
 .config
 .envrc
 .idea
