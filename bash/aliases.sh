@@ -17,7 +17,7 @@ alias pull='git pull'
 alias amend='git commit --amend'
 
 # add -a to auto-correct: `gdcop -a`
-alias gdcop="git diff --name-only | grep '\.rb' | xargs rubocop"
+alias gdcop="git diff --name-only | grep '\.rb' | tr '\n' ' ' | sed 's/,$/\n/' | xargs rubocop"
 
 export GITMASK='rb|js|html|erb|haml|slim|css|scss|jsx|rake|json|yml|c|h|cpp'
 alias gitwho="git ls-tree --name-only -r HEAD | grep -E '\.($GITMASK)$' | xargs -n1 git blame --line-porcelain | grep '^author '|sort|uniq -c|sort -nr"
