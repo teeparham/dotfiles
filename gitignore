@@ -7,10 +7,10 @@
 .envrc
 .idea
 .rvmrc
-InstalledFiles
+coverage
+log
 pkg
 rdoc
+tags
 tmp
-/coverage
-/log
-/tags
+InstalledFiles
