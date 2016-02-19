@@ -7,5 +7,6 @@ export BUNDLER_EDITOR=atom
 export EDITOR=vim
 export BREW=/usr/local/Library/Formula
 export PS1="\[$(tput setaf 2)\]\W $ \[$(tput sgr0)\]"
+export PARALLEL_TEST_PROCESSORS=6
 
 ssh-add
