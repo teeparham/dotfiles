@@ -27,6 +27,7 @@ alias bo='bundle outdated'
 alias bos='bundle outdated --strict'
 alias bu='bundle update'
 alias bake='be rake'
+alias gemwat='gem dep --rev $1'
 
 alias prep='rake parallel:prepare'
 alias pt='rake parallel:test'
