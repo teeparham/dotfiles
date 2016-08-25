@@ -22,10 +22,11 @@
   co = checkout
   ci = commit
   st = status
-  br = branch
+  br = branch -vv
   sb = show-branch
   df = diff --ignore-space-change
   aa = add -A
+  rem = remote -v
 
 [branch]
   autosetuprebase = always
