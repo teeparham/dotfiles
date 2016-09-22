@@ -15,6 +15,7 @@ alias glme='gl --author=tee'
 alias push='git push'
 alias pull='git pull'
 alias amend='git commit --amend'
+alias stash='git stash -u wip'
 
 # add -a to auto-correct: `gdcop -a`
 alias gdcop="git diff --name-only | grep '\.rb' | tr '\n' ' ' | sed 's/,$/\n/' | xargs rubocop"
@@ -25,15 +26,14 @@ alias gitwho="git ls-tree --name-only -r HEAD | grep -E '\.($GITMASK)$' | xargs 
 alias be='bundle exec'
 alias bo='bundle outdated'
 alias bos='bundle outdated --strict'
-alias bu='bundle update'
 alias bake='be rake'
 alias blech='be rspec'
 alias gemwat='gem dep --rev $1'
 
 alias prep='rake parallel:prepare'
 alias pt='rake parallel:test'
-alias rc='rails c'
-alias rs='rails s -b 127.0.0.1'
+alias rc='bin/rails c'
+alias rs='bin/rails s -b 127.0.0.1'
 alias t='spring rake test $1'
 
 alias wtf3000='lsof -wni tcp:3000'
