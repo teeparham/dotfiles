@@ -15,7 +15,7 @@ alias glme='gl --author=tee'
 alias push='git push'
 alias pull='git pull'
 alias amend='git commit --amend'
-alias stash='git stash -u wip'
+alias stash='git stash save -u wip'
 
 # add -a to auto-correct: `gdcop -a`
 alias gdcop="git diff --name-only | grep '\.rb' | tr '\n' ' ' | sed 's/,$/\n/' | xargs rubocop"
