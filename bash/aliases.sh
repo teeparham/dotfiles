@@ -27,7 +27,7 @@ alias be='bundle exec'
 alias bo='bundle outdated'
 alias bos='bundle outdated --strict'
 alias bake='be rake'
-alias blech='be rspec'
+alias blech='bin/rspec --no-profile'
 alias gemwat='gem dep --rev $1'
 
 alias prep='rake parallel:prepare'
