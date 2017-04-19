@@ -28,14 +28,6 @@ def time
   puts "----> #{ ((t2-t1)*1000).round(0) } ms"
 end
 
-def haml
-  helper.extend Haml::Helpers
-  helper.extend ApplicationHelper
-  helper.init_haml_helpers
-  puts "Haml Helpers Loaded"
-end
-public :haml
-
 class Object
   def wtf(method_name)
     method(method_name).source_location
