@@ -38,6 +38,7 @@
 [user]
   name = Tee Parham
   email = tee@neighborland.com
+  signingKey = <.replace github-signing-key>
 
 [core]
   excludesfile = /Users/tee/.gitignore
