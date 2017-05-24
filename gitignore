@@ -4,7 +4,6 @@
 .bundle
 .byebug_history
 .config
-.envrc
 .idea
 .rvmrc
 coverage
