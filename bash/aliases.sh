@@ -34,7 +34,7 @@ alias prep='rake parallel:prepare'
 alias pt='rake parallel:test'
 alias rc='rails c'
 alias rs='rails s'
-alias t='spring rake test $1'
+alias t='rails test $1'
 
 alias wtf3000='lsof -wni tcp:3000'
 alias rdoc2md='ruby ~/.ruby/rdoc2md.rb $1'
