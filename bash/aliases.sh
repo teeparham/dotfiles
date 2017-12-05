@@ -35,6 +35,8 @@ alias pt='rake parallel:test'
 alias rc='rails c'
 alias rs='rails s'
 alias t='rails test $1'
+alias cacheon='touch tmp/caching-dev.txt'
+alias cacheoff='rm tmp/caching-dev.txt'
 
 alias wtf3000='lsof -wni tcp:3000'
 alias rdoc2md='ruby ~/.ruby/rdoc2md.rb $1'
