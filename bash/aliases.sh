@@ -30,13 +30,16 @@ alias bake='be rake'
 alias blech='rspec --no-profile'
 alias gemwat='gem dep --rev $1'
 
-alias prep='rake parallel:prepare'
-alias pt='rake parallel:test'
+alias prep='rails parallel:prepare'
+alias pt='rails parallel:test'
 alias rc='rails c'
 alias rs='rails s'
 alias t='rails test $1'
 alias cacheon='touch tmp/caching-dev.txt'
 alias cacheoff='rm tmp/caching-dev.txt'
+
+alias dockup='docker-compose up -d'
+alias dockdown='docker-compose down'
 
 alias wtf3000='lsof -wni tcp:3000'
 alias rdoc2md='ruby ~/.ruby/rdoc2md.rb $1'
