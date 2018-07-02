@@ -16,7 +16,6 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 eval "$(direnv hook bash)"
-eval "$(~/pro/neighborland/scripts/bin/neighbor init -)"
 
 eval `keychain --agents gpg,ssh --eval id_rsa`
 export GPG_TTY=`tty`
