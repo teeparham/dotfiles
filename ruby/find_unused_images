@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # https://gist.github.com/justVitalius/25318a1d71bcc657ee21
 
 images = Dir.glob('app/assets/images/**/*')

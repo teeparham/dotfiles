@@ -42,8 +42,6 @@ alias dockup='docker-compose up -d'
 alias dockdown='docker-compose down'
 
 alias wtf3000='lsof -wni tcp:3000'
-alias rdoc2md='ruby ~/.ruby/rdoc2md.rb $1'
-alias find_unused_images='ruby ~/.ruby/find_unused_images.rb'
 
 alias redis='redis-server /usr/local/etc/redis.conf'
 alias ct='/usr/local/bin/ctags -R .'
