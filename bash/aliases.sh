@@ -1,5 +1,6 @@
-alias hg='history | grep $1'
 alias eg='env | grep $1'
+alias hg='history | grep $1'
+alias pg='ps -ef | grep $1'
 alias lsl='ls -Alh'
 alias lst='ls -Alht'
 
