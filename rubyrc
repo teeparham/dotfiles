@@ -28,6 +28,13 @@ def time
   puts "----> #{((t2-t1)*1000).round(2)} ms"
 end
 
+def time_gem(name, require_file = nil)
+  time do
+    gem name
+    require require_file || name
+  end
+end
+
 class Object
   def wtf(method_name)
     method(method_name).source_location
@@ -36,9 +43,41 @@ class Object
   end
 end
 
-def hhi; { a: 1, b: 2, c: 3, d: 4, e: 5 }; end
-def hhs; { a: "a", b: "b", c: "c", d: "d", e: "e" }; end
-def aai; [1, 2, 3, 4, 5]; end
-def aas; %w(a b c d e); end
+# { a: 1, b: 2, c: 3, d: 4, e: 5 }
+def hhi(n = 5)
+  Hash[(1..n).map { |i| [(96 + i).chr.to_sym, i] }]
+end
+
+# { a: "a", b: "b", c: "c", d: "d", e: "e" }
+def hhs(n = 5)
+  Hash[(1..n).map { |i| [(96 + i).chr.to_sym, (96 + i).chr] }]
+end
+
+# [1, 2, 3, 4, 5]
+def aai(n = 5)
+  (1..n).to_a
+end
+
+# %w[a b c d e]
+def aas(n = 5)
+  (1..n).map { |i| (96 + i).chr }
+end
+
+def hint
+  puts <<~HINT
+
+    bench(repetitions=100, &block)
+
+    time_gem(name, require_file = nil)
+
+    Object#wtf(method_name)
+
+    aai(n = 5) [1, 2, 3, 4, 5]
+    aas(n = 5) %w[a b c d e]
+    hhi(n = 5) { a: 1, b: 2, c: 3, d: 4, e: 5 }
+    hhs(n = 5) { a: "a", b: "b", c: "c", d: "d", e: "e" }
+
+  HINT
+end
 
 load File.expand_path("~/.railsrc")
