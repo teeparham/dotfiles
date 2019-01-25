@@ -8,9 +8,11 @@ source ~/.bash/functions.sh
 source '/usr/local/share/chruby/chruby.sh'
 source '/usr/local/share/chruby/auto.sh'
 
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
+# git bash completion
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
+# heroku bash completion
+source /Users/tee/Library/Caches/heroku/autocomplete/bash_setup
 
 # export NVM_DIR=~/.nvm
 # source $(brew --prefix nvm)/nvm.sh
