@@ -20,7 +20,7 @@ if defined?(Rails)
   }
   IRB.conf[:PROMPT_MODE] = :RAILS
 
-  def sql(query)
+  def execute(query)
     ActiveRecord::Base.connection.select_all(query)
   end
 
