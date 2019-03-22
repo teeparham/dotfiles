@@ -10,7 +10,7 @@ alias hiddenfilesoff='defaults write com.apple.finder AppleShowAllFiles FALSE &&
 alias gc='git commit -a -m $1'
 alias gs='git status'
 alias gd='git diff'
-alias gl="git log --date=local --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset'"
+alias gl="git log --date=human --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset'"
 alias gitup='git branch --set-upstream-to=origin/master master'
 alias glme='gl --author=tee'
 alias push='git push'
