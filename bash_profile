@@ -22,6 +22,4 @@ eval "$(direnv hook bash)"
 # eval `keychain --agents gpg,ssh --eval id_rsa`
 # export GPG_TTY=`tty`
 
-if [ -f $(brew --prefix)/opt/mcfly/mcfly.bash ]; then
-  . $(brew --prefix)/opt/mcfly/mcfly.bash
-fi
+eval "$(mcfly init bash)"
