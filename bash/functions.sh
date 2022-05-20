@@ -11,3 +11,9 @@ function rr() {
     do eval ${*:2}
   done
 }
+
+# brew install ffmpeg imagemagick
+function mov2gif() {
+  ffmpeg -i "$1" -vf scale=800:-1 -r 10 -f image2pipe -vcodec ppm - |\
+  convert -delay 5 -layers Optimize -loop 0 - "${1%.*}.gif"
+}
