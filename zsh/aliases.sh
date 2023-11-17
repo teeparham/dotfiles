@@ -29,7 +29,6 @@ alias be='bundle exec'
 alias bo='bundle outdated'
 alias bos='bundle outdated --strict'
 alias bake='be rake'
-alias blech='rspec --no-profile'
 alias gemwat='gem dep --rev $1'
 
 alias prep='rails parallel:prepare'
@@ -45,7 +44,6 @@ alias dockdown='docker-compose down'
 
 alias wtf3000='lsof -wni tcp:3000'
 
-alias redis='redis-server /usr/local/etc/redis.conf'
 alias ct='/usr/local/bin/ctags -R .'
 
 alias dizzle="ruby -e \"require 'ffaker'; puts FFaker::DizzleIpsum.paragraph\" | tee >(pbcopy)"
