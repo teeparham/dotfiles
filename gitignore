@@ -6,6 +6,7 @@
 .config
 .idea
 .rvmrc
+.vscode
 coverage
 log
 node_modules
