@@ -1,2 +1,3 @@
-export PATH=/Users/tee/.ruby:$PATH
-
+export PATH=$PATH:/Users/tee/.ruby
+# pipx
+export PATH="$PATH:/Users/tee/.local/bin"
