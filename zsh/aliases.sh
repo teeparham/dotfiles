@@ -41,6 +41,7 @@ alias cacheoff='rm tmp/caching-dev.txt'
 
 alias dockup='docker-compose up -d'
 alias dockdown='docker-compose down'
+alias dockredis='docker run -p 6379:6379 -p 8001:8001 redis/redis-stack'
 
 alias wtf3000='lsof -wni tcp:3000'
 
