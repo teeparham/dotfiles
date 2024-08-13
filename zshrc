@@ -19,4 +19,3 @@ source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 
 eval "$(direnv hook zsh)"
 eval "$(mcfly init zsh)"
-eval "$(fnm env --use-on-cd)"
