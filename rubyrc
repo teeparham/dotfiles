@@ -14,13 +14,6 @@ def bench(repetitions=100, &block)
   nil
 end
 
-begin
-  require "hirb"
-  Hirb.enable
-rescue LoadError
-  puts "Warning: hirb not installed"
-end
-
 def time
   t1 = Time.now
   yield
