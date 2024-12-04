@@ -10,6 +10,11 @@ precmd() { vcs_info }
 
 zstyle ':vcs_info:git:*' formats '%b '
 
+# git completion
+zstyle ':completion:*:*:git:*' script /opt/homebrew/opt/git/share/zsh/site-functions/git-completion.bash
+fpath=(/opt/homebrew/opt/git/share/zsh/site-functions $fpath)
+autoload -Uz compinit && compinit
+
 setopt PROMPT_SUBST
 PROMPT='%F{green}%~%f %F{yellow}${vcs_info_msg_0_}%f$ '
 
