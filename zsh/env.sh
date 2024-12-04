@@ -5,5 +5,6 @@ export HISTFILESIZE=99999
 export BUNDLER_EDITOR=vim
 export EDITOR=vim
 export PARALLEL_TEST_PROCESSORS=6
+export RUBY_YJIT_ENABLE=1
 
 # ssh-add
