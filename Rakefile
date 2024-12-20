@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 # see https://github.com/henrik/dotfiles/blob/master/Rakefile
 
-IGNORE_FILES = ['Rakefile', 'README.md', '.gitignore', 'extras']
+IGNORE_FILES = ["Rakefile", "README.md", ".gitignore", "extras"].freeze
 
 def error(text)
-  STDERR.puts "!  #{text}"
+  warn "!  #{text}"
 end
 
-def info(text, prefix="*")
-  STDOUT.puts "#{prefix}  #{text}"
+def info(text, prefix = "*")
+  $stdout.puts "#{prefix}  #{text}"
 end
 
 def info_cmd(text)
@@ -33,29 +35,30 @@ task :install do
     elsif File.exist?(destination)
       error "#{destination} exists. Will not automatically overwrite a non-symlink. Overwrite (y/n)?"
       print "? "
-      if STDIN.gets.match(/^y/i)
-        info_rm "Removing #{destination}."
-        FileUtils.rm_rf(destination)
-      else
-        next
-      end
+      line = $stdin.gets.chomp
+      next unless line == "y"
+
+      info_rm "Removing #{destination}."
+      FileUtils.rm_rf(destination)
     end
 
-    contents = File.read(source) rescue ""
+    contents = begin
+      File.read(source)
+    rescue StandardError
+      ""
+    end
 
-    if contents.include?('<.replace ')
+    if contents.include?("<.replace ")
       info "#{source} has <.replace> placeholders."
 
       contents.gsub!(/<\.replace (.+?)>/) do
-        begin
-          File.read(File.expand_path("~/.#{$1}"))
-        rescue => e
-          error "Could not replace `#{$&}`: #{e.message}"
-          ""
-        end
+        File.read(File.expand_path("~/.#{Regexp.last_match(1)}"))
+      rescue StandardError => e
+        error "Could not replace `#{Regexp.last_match(0)}`: #{e.message}"
+        ""
       end
 
-      File.open(destination, 'w') {|f| f.write contents }
+      File.write(destination, contents)
       info_cmd "wrote file #{destination}"
     else
       FileUtils.ln_s(source, destination)
