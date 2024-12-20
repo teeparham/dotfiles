@@ -38,21 +38,11 @@
 [user]
   name = Tee Parham
   email = parhameter@gmail.com
-#  signingKey = <.replace github-signing-key>
 
 [core]
   excludesfile = /Users/tee/.gitignore
   whitespace = -trailing-space
   ignorecase = false
-
-[init]
-  defaultBranch = main
-
-[credential]
-    helper = /usr/local/share/gcm-core/git-credential-manager
-
-[credential "https://dev.azure.com"]
-    useHttpPath = true
 
 [commit]
   gpgsign = true
@@ -60,5 +50,18 @@
 [tag]
   gpgSign = true
 
-# [gpg]
-#   program = /usr/local/bin/gpg
+[init]
+  defaultBranch = main
+
+[credential]
+  helper = /usr/local/share/gcm-core/git-credential-manager
+
+[credential "https://dev.azure.com"]
+  useHttpPath = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
