@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-# see https://github.com/henrik/dotfiles/blob/master/Rakefile
-
-IGNORE_FILES = ["Rakefile", "README.md", ".gitignore", "extras"].freeze
+IGNORE_FILES = ["Rakefile", "README.md", ".gitignore", "cursor"].freeze
 
 def error(text)
   warn "!  #{text}"
