@@ -28,5 +28,5 @@ utrs() {
 utr() {
   local url="https://api.utrsports.net/v1/player/$1/profile"
   local response=$(curl -s $url)
-  echo "$response" | jq '.threeMonthRating'
+  echo "$response" | jq -r '. | "\(.displayName) - \(.threeMonthRating) \(.singlesUtr)"'
 }
