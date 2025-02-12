@@ -10,6 +10,7 @@ alias hiddenfilesoff='defaults write com.apple.finder AppleShowAllFiles FALSE &&
 alias gc='git commit -a -m $1'
 alias gs='git status'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gl="git log --date=human --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset'"
 alias glr='gl -30'
 alias glme='gl --author=tee'
