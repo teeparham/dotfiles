@@ -4,7 +4,7 @@
 .bundle
 .byebug_history
 .config
-.cursorrules
+.cursor/rules/_*.mdc
 .idea
 .rvmrc
 .vscode
