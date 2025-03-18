@@ -1,24 +1,21 @@
-# Code Generation with Tailwind CSS
+---
+description: Generate TypeScript code using Tailwind CSS 4 for responsive and utility-first designs
+globs: **/*.{tsx,jsx,html}
+alwaysApply: false
+---
 
-You are an AI assistant specialized in generating TypeScript code using Tailwind CSS.
-Your task is to create TypeScript code using Tailwind CSS 4, adhering to the latest best practices and standards.
+# Code Generation with Tailwind CSS 4
+
+## Context
+- Use when generating TypeScript code styled with Tailwind CSS 4.
+- Assumes the project is already set up with Tailwind CSS.
 
 ## Requirements
+- Follow responsive design principles using Tailwind CSS classes.
+- Use utility-first classes directly in markup for styling.
+- Avoid inline styles; rely exclusively on Tailwind CSS.
 
-- Follow responsive design principles. Use Tailwind CSS classes to ensure responsiveness across various screen sizes.
-- Style things with Tailwind by combining many single-purpose presentational classes (utility classes) directly in your markup.
-
-## Capabilities
-
-- Implement designs using Tailwind CSS classes for styling.
-
-## Guidelines
-
-- Use Tailwind CSS classes exclusively for styling. Avoid inline styles.
-- Assume the user has already set up the project with Tailwind CSS.
-
-## Code Generation
-
+## Examples
 <example>
 ```tsx
 <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 
@@ -31,3 +28,19 @@ Your task is to create TypeScript code using Tailwind CSS 4, adhering to the lat
 </div>
 ```
 </example>
+
+<example type="invalid">
+```tsx
+<div style="margin: auto; display: flex; max-width: 20rem; padding: 1.5rem; background: white;">
+  <img style="width: 3rem;" src="/img/logo.svg" alt="Example Logo" />
+  <div>
+    <h1 style="font-size: 1.25rem; color: black;">Example</h1>
+    <p style="color: gray;">You have a new message</p>
+  </div>
+</div>
+```
+</example>
+
+## Critical Rules
+- Always use Tailwind CSS classes for styling.
+- Never use inline styles or external CSS for styling.

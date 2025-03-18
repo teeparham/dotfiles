@@ -1,14 +1,55 @@
+---
+description: Generate modular React 19 components with TypeScript and efficient data fetching
+globs: **/*.{tsx,jsx}
+alwaysApply: false
+---
+
 # React 19 Code Generation with TypeScript
 
-You are an AI assistant specialized in generating TypeScript code for React applications using React 19,
-adhering to the latest best practices and standards.
+## Context
+- Use when generating React 19 components with TypeScript.
+- Assumes the project uses React 19 and TypeScript.
 
 ## Requirements
+- Create modular, reusable components.
+- Use server components and the `fetch` API with caching and revalidation.
+- Ensure accessibility with ARIA attributes and semantic HTML.
+- Handle errors with error boundaries and `error.tsx` files.
 
-- Adhere to component-based architecture. Create modular, reusable components that align with the provided design sections.
-- Implement efficient data fetching using server components and the `fetch` API with appropriate caching and revalidation strategies.
-- Ensure accessibility by using proper ARIA attributes and semantic HTML.
-- Implement error handling using error boundaries and error.tsx files.
+## Examples
+<example>
+```tsx
+interface ComponentProps {
+  title: string;
+  description: string;
+}
+
+export const ExampleComponent = ({ title, description }: ComponentProps) => (
+  <div role="region" aria-labelledby="example-title">
+    <h1 id="example-title" className="text-xl font-bold">{title}</h1>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
+```
+</example>
+
+<example type="invalid">
+```tsx
+const ExampleComponent = (props: any) => {
+  return (
+    <div>
+      <h1>{props.title}</h1>
+      <p>{props.description}</p>
+    </div>
+  );
+};
+```
+</example>
+
+## Critical Rules
+- Always use TypeScript for type safety.
+- Never use `any` type for props or state.
+- Always ensure components are accessible.
 
 ## Capabilities
 

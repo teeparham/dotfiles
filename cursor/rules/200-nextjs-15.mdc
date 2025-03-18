@@ -1,76 +1,52 @@
+---
+description: Generate Next.js 15 components with TypeScript and Tailwind CSS for optimized performance
+globs: **/*.{tsx,jsx}
+alwaysApply: false
+---
+
 # Next.js 15 Code Generation with TypeScript
 
-You are an AI assistant specialized in generating TypeScript code for Next.js 15 applications using Tailwind CSS.
-Your task is to analyze design screenshots and create corresponding TypeScript code that implements the design using
-Next.js 15, React 19, and Tailwind CSS 4, adhering to the latest best practices and standards.
+## Context
+- Use when generating Next.js 15 components with TypeScript and Tailwind CSS.
+- Assumes the project uses Next.js 15, React 19, and Tailwind CSS 4.
 
 ## Requirements
+- Use the App Router and follow Next.js conventions.
+- Default to Server Components; use Client Components only when necessary.
+- Use Next.js metadata API for SEO.
+- Optimize images with the Next.js Image component.
+- Implement loading states with `loading.tsx`.
 
-- Use the App Router. All components should be created within the `app` directory, following Next.js conventions.
-- Implement Server Components by default. Only use Client Components when necessary for interactivity or client-side state management.
-- Use Next.js's metadata API for SEO optimization.
-- Use Next.js Image component for optimized image loading.
-- Use loading.tsx files for managing loading states.
-- Utilize route handlers (route.ts) for API routes in the App Router.
+## Examples
+<example>
+```tsx
+import Image from 'next/image';
 
-## Capabilities
+export default function Page() {
+  return (
+    <div className="container mx-auto p-4">
+      <Image src="/example.jpg" alt="Example" width={500} height={300} />
+      <h1 className="text-2xl font-bold">Welcome to Next.js 15</h1>
+    </div>
+  );
+}
+```
+</example>
 
-- Analyze design screenshots to understand layout, styling, and component structure.
-- Generate TypeScript code for Next.js components, including proper imports and export statements.
-- Suggest appropriate Next.js features (e.g., Server Components, Client Components, API routes) based on the requirements.
-- Provide a structured approach to building complex layouts, breaking them down into manageable components.
-- Implement efficient data fetching, caching, and revalidation strategies.
-- Optimize performance using Next.js built-in features and best practices.
-- Integrate SEO best practices and metadata management.
+<example type="invalid">
+```tsx
+export default function Page() {
+  return (
+    <div style={{ margin: 'auto', padding: '1rem' }}>
+      <img src="/example.jpg" alt="Example" />
+      <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Welcome to Next.js 15</h1>
+    </div>
+  );
+}
+```
+</example>
 
-## Guidelines
-
-- Provide clear, concise comments explaining complex logic or design decisions.
-- Suggest appropriate file structure and naming conventions aligned with Next.js 15 best practices.
-- Assume the user has already set up the Next.js project with Tailwind CSS.
-- Use environment variables for configuration following Next.js conventions.
-- Utilize Next.js's built-in caching and revalidation features for optimal performance.
-
-## Code Generation
-
-- Use the `'use client'` directive only when creating Client Components.
-- Employ the following component definition syntax in .tsx files, allowing TypeScript to infer the return type:
-    ```tsx
-    const ComponentName = () => {
-      // Component logic
-    };
-    ```
-- For page components, use default exports in .tsx files:
-    ```tsx
-    const Page = () => {
-      // Page component logic
-    };
-    export default Page;
-    ```
-- For data fetching in server components (in .tsx files):
-    ```tsx
-    async function getData() {
-      const res = await fetch('<https://api.example.com/data>', { next: { revalidate: 3600 } })
-      if (!res.ok) throw new Error('Failed to fetch data')
-      return res.json()
-    }
-    export default async function Page() {
-      const data = await getData()
-      // Render component using data
-    }
-    ```
-- For error handling (in error.tsx):
-    ```tsx
-    'use client'
-    export default function Error({
-      error,
-      reset,
-    }: {
-      error: Error & { digest?: string }
-      reset: () => void
-    }) {
-      return (
-        // Render component
-      );
-    }
-    ```
+## Critical Rules
+- Always use the App Router and Next.js conventions.
+- Never use inline styles; rely on Tailwind CSS.
+- Always optimize images with the Next.js Image component.

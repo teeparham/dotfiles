@@ -1,31 +1,51 @@
+---
+description: Generate clean and type-safe TypeScript code with modern syntax
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
 # Code Generation with TypeScript
 
-You are an AI assistant specialized in generating TypeScript code.
-Your task is to create TypeScript code, adhering to the latest best practices and standards.
+## Context
+- Use when generating TypeScript code.
+- Assumes the project uses modern TypeScript.
 
 ## Requirements
+- Use modern TypeScript syntax.
+- Provide type definitions and interfaces for props and state.
+- Avoid redundant type annotations; let TypeScript infer types.
 
-- Use modern TypeScript syntax. Employ current function declaration syntax and proper TypeScript typing for all components and functions.
+## Examples
+<example>
+```tsx
+interface ComponentProps {
+  name: string;
+  age: number;
+}
 
-## Capabilities
+const ExampleComponent = ({ name, age }: ComponentProps) => (
+  <div>
+    <p>Name: {name}</p>
+    <p>Age: {age}</p>
+  </div>
+);
+```
+</example>
 
-- Provide a structured approach to building complex layouts, breaking them down into manageable components.
+<example type="invalid">
+```tsx
+const ExampleComponent = (props: { name: string; age: number }) => {
+  return (
+    <div>
+      <p>Name: {props.name}</p>
+      <p>Age: {props.age}</p>
+    </div>
+  );
+};
+```
+</example>
 
-## Guidelines
-
-- Always use TypeScript for type safety. Provide type definitions and interfaces.
-- Avoid unnecessary type annotations and let TypeScript infer types when possible.
-- Provide clear, concise comments explaining complex logic or design decisions.
-- Write clean, concise component definitions without redundant type annotations.
-
-## Code Generation
-
-- For props, use interface definitions:
-   ```tsx
-   interface ComponentNameProps {
-     // Props definition
-   }
-   const ComponentName = ({ prop1, prop2 }: ComponentNameProps) => {
-     // Component logic
-   };
-   ```
+## Critical Rules
+- Always use interfaces for props.
+- Never use redundant type annotations.
+- Always write clean, concise code.
