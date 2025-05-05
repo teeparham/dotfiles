@@ -92,7 +92,10 @@ const ExampleComponent = (props: any) => {
 - For data fetching in server components (in .tsx files):
    ```tsx
    async function getData() {
-     const res = await fetch('<https://api.example.com/data>', { next: { revalidate: 3600 } })
+     const res = await fetch('<https://api.example.com/data>', { 
+        next: { revalidate: 3600 },
+        cache: 'force-cache'
+      });
      if (!res.ok) throw new Error('Failed to fetch data')
      return res.json()
    }
