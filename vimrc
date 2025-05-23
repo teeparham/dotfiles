@@ -121,6 +121,9 @@ set mouse=a
 " Tell us when anything is changed via :...
 set report=0
 
+" Use new regular expression engine
+set re=0
+
 " Don't artificially wrap long lines on the screen
 set nowrap
 
